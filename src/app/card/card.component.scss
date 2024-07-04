@@ -7,4 +7,10 @@ img{
     border-bottom: 1px solid black;
 }
 
+a {
+    all: unset;
+}
 
+a:hover{
+    cursor:pointer;
+}

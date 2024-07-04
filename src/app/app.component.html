@@ -1,22 +1,39 @@
 <div id="main">
 
   <app-header></app-header>
-  
+
+  <app-searchbar (search)="onSearch($event)"></app-searchbar>
+
   <ng-template *ngIf="coins.length; then bloccoIf else bloccoElse"></ng-template>
 
   <ng-template #bloccoIf>
     <div id="coins">
-      <app-card *ngFor="let coin of coins" class="card" 
-      [image]="coin.image"
-      [name]="coin.name"
-      [price]="coin.current_price"
-      [trend]="coin.trend">
-      </app-card>
+      <ng-template *ngIf="search.length; then bloccoIf else bloccoElse"></ng-template>
+      <ng-template #bloccoIf>
+          <app-card *ngFor="let coin of filteredCoins" class="card" 
+          [image]="coin.image"
+          [name]="coin.name"
+          [price]="coin.current_price"
+          [trend]="coin.trend">
+          </app-card>
+      </ng-template>
+      <ng-template #bloccoElse>
+        <app-card *ngFor="let coin of coins" class="card" 
+        [image]="coin.image"
+        [name]="coin.name"
+        [price]="coin.current_price"
+        [trend]="coin.trend">
+        </app-card>
+      </ng-template>
     </div>
+    <button mat-mini-fab (click)="scrollTop()">
+      <mat-icon>home</mat-icon>
+    </button>
   </ng-template>
 
 
   <ng-template #bloccoElse>
     <p style="color: white;">Loading...</p>
   </ng-template>
+
 </div>

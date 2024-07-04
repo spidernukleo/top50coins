@@ -10,4 +10,10 @@ export class CardComponent {
   @Input() name="";
   @Input() price="";
   @Input() trend="";
+
+  getName(name:string):string{
+    return name.toLowerCase().replace(/ /g, '-');
+  }
 }
+
+

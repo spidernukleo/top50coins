@@ -12,13 +12,16 @@ import {MatChipsModule} from '@angular/material/chips';
 import {MatInputModule} from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { SearchbarComponent } from './searchbar/searchbar.component';
+import {MatIconModule} from '@angular/material/icon';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    CardComponent
+    CardComponent,
+    SearchbarComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +30,8 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     MatCardModule,
     MatChipsModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    MatIconModule
   ],
   providers: [
     provideClientHydration(),
