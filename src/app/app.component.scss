@@ -1,0 +1,12 @@
+#coins{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.card{
+    padding:1%;
+    flex: 1 1 calc(25% - 20px);
+    margin: 10px;
+    max-width: 300px;
+}

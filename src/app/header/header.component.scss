@@ -1,0 +1,14 @@
+#header{
+    height:15vh;
+    width:100%;
+    display: flex;
+    justify-content: center; //centra verticalmente
+    align-items: center; //centra orizontalmente
+    flex-direction: column; //metti a colonna non a riga
+    color:rgb(207, 197, 177);
+}
+
+p{
+    font-size:7vh;
+    margin-bottom:15px;
+}
