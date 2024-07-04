@@ -14,7 +14,7 @@ export class Top50Service {
   top50coins(): Observable<any[]>{
     const headers = new HttpHeaders({
       'Accept': 'application/json',
-      'x-cg-demo-api-key': 'CG-WCvuE1kDHHPWXJdZB6w7uNur	'
+      'x-cg-demo-api-key': 'CG-mSt8CS2hddzaRvqzL4Tz3WgA'
     });
     const params = {
       vs_currency: 'usd',
